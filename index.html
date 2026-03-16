@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SIMAC</title>
+  <link rel="icon" href="https://simac.app/header_image_simac.png">
+  <style>
+    :root{--muted:#9aa4b2}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;display:flex;flex-direction:column;align-items:center;background:linear-gradient(180deg,#071028 0%, #0b1220 60%);color:#e6eef8;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .header{width:100%;padding:35px 0;display:flex;justify-content:center;align-items:center}
+    .header img{height:80px;object-fit:contain}
+    .main{flex:1;display:flex;align-items:center;justify-content:center;width:100%;padding:50px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.04);backdrop-filter:blur(6px);padding:55px;border-radius:20px;display:flex;flex-direction:column;align-items:center;gap:25px;box-shadow:0 10px 38px rgba(2,6,23,0.6);max-width:900px;width:90%}
+    .title{font-size:25px;font-weight:600;color:#fff}
+    .buttons{display:flex;gap:20px}
+    .btn{display:inline-flex;align-items:center;gap:15px;padding:18px 28px;border-radius:15px;text-decoration:none;font-weight:700;color:#061226;background:linear-gradient(90deg,#fff,#fff);box-shadow:0 8px 23px rgba(2,6,23,0.6);transition:transform .12s ease,box-shadow .12s ease}
+    .btn:hover{transform:translateY(-5px);box-shadow:0 15px 38px rgba(2,6,23,0.7)}
+    .btn.secondary{background:linear-gradient(90deg,#0ea5e9,#6366f1);color:white}
+    .btn.js{background:linear-gradient(90deg,#f7df1e,#ffb86b);color:#071226}
+    .note{background:rgba(255,255,255,0.02);padding:14px 18px;border-radius:12px;color:var(--muted);font-size:15px;text-align:center;max-width:720px}
+    .creds{margin-top:10px;background:rgba(0,0,0,0.18);padding:10px 12px;border-radius:10px;color:#fff;font-weight:700;display:inline-flex;gap:12px}
+    .cred-item{font-family:monospace;background:rgba(255,255,255,0.03);padding:6px 10px;border-radius:8px}
+    .footer{padding:25px;color:var(--muted);font-size:16px}
+    @media(max-width:520px){.buttons{flex-direction:column;width:100%}.btn{width:100%;justify-content:center}.creds{flex-direction:column;gap:8px}}
+  </style>
+</head>
+<body>
+  <header class="header">
+    <img src="https://simac.app/header_image_simac.png" alt="SIMAC logo">
+  </header>
+  <main class="main">
+    <div class="card" role="region" aria-label="SIMAC links">
+      <div class="title">Choose an environment</div>
+      <div class="buttons">
+        <a class="btn js" href="https://javascript.simac.ianmarais.com/" target="_blank" rel="noopener noreferrer">JavaScript</a>
+        <a class="btn secondary" href="https://react.simac.ianmarais.com/" target="_blank" rel="noopener noreferrer">React</a>
+      </div>
+      <div class="note" aria-live="polite">
+        <div>This is a mockup of SIMAC created for an interview at <a href="https://nerospec.com" target="_blank" rel="noopener noreferrer" style="color:inherit;text-decoration:underline">Nerospec.com</a>. You can log in to test using the demo account below.</div>
+        <div class="creds" role="group" aria-label="demo credentials">
+          <span class="cred-item">Username: demo</span>
+          <span class="cred-item">Password: demo</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">© SIMAC</footer>
+</body>
+</html>
